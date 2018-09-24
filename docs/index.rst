@@ -1,0 +1,21 @@
+.. dveo documentation master file, created by
+   sphinx-quickstart on Tue Sep 18 13:45:04 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to dveo's documentation!
+================================
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+   dveo
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

@@ -1,0 +1,12 @@
+# Python related
+__pycache__/
+*.egg-info/
+
+# IDE related
+.vscode/
+
+# Sphinx documentation
+docs/_build/
+
+# Operating System related
+.DS_Store

@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+xmltodict = "*"
+
+[dev-packages]
+black = "*"
+"flake8" = "*"
+rope = "*"
+pydocstyle = "*"
+sphinx = "*"
+
+[requires]
+python_version = "3.6"
