@@ -15,7 +15,8 @@ class API:
     """Instantiate a single DVEO API container object.
 
     :param str address: IP address or hostname of encoder.
-    :param str password: Password for the apiuser account.
+    :param str password: Password for the apiuser account, if user security is disabled
+        anything is valid, like ''.
     :param str username: (optional) apiuser username is usually locked to `apiuser`.
     :param port: (optional) Port number configured for the API webserver,
         defaults to `25599`.
@@ -40,7 +41,10 @@ class API:
         self.address = address
         self.port = port
         self.username = username
-        self.password = password
+        if not password:
+            self.password = ""
+        else:
+            self.password = password
         if data_format not in ("xml", "json"):
             # TODO: raise some error
             sys.exit("Invalid data_format set, use either xml or json.")
