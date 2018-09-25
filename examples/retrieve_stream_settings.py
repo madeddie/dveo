@@ -8,6 +8,7 @@ import argparse
 import getpass
 import json
 import os
+import re
 import sys
 
 from dveo import API
@@ -49,7 +50,7 @@ if __name__ == "__main__":
     for encoder in encoders:
         dveo = API(encoder, password, data_format=data_format)
         for input_id in dveo.list_inputs():
-            input_status = dveo.service_status(input_id)
+            input_status = re.sub(" \d+", " X", dveo.service_status(input_id))
             input_config = dveo.input_config(input_id)
             if not input_config.get("inputname"):
                 continue
