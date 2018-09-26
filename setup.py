@@ -8,10 +8,10 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as f:
 
 setup(
     name="dveo",
-    version="0.2.0",
+    version="0.2.1",
     description="DVEO REST API wrapper",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     url="https://github.com/madeddie/dveo",
     author="Edwin Hermans",
     author_email="edwin@madtech.cx",
