@@ -244,7 +244,7 @@ class API:
         return res
 
     def start_service(self, service_name):
-        """Stop service."""
+        """Start service."""
         res = self._request("StartServiceRequest", {"ServiceName": service_name})
         if res == "":
             return True
@@ -298,10 +298,10 @@ class API:
         """Lookup input_id by output config paramater.
 
         :param str output_param_name: Name of output config parameter
-        :param str output_param_value: Value of output config paramter
+        :param str output_param_value: Value of parameter
         :param partial: (optional) Allow for partial matches, defaults to `False`
         :type partial: bool
-        :param include_value: (optional) Include param value in output,
+        :param include_value: (optional) Include param value(s) in output,
             useful with `partial`, defaults to `False`
         :type include_uri: bool
         """

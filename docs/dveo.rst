@@ -5,6 +5,7 @@ Module contents
 ---------------
 
 .. automodule:: dveo
+    :private-members:
     :members:
     :undoc-members:
     :show-inheritance:

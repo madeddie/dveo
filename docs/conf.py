@@ -16,7 +16,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(".."))
-import dveo
+import dveo  # noqa: F401,E402
 
 # -- Project information -----------------------------------------------------
 
@@ -80,7 +80,13 @@ html_theme = "alabaster"
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    "github_user": "madeddie",
+    "github_repo": "dveo",
+    "github_type": "star",
+    "description": "Python DVEO API wrapper",
+    "sidebar_collapse": False,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -96,6 +102,15 @@ html_static_path = ["_static"]
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+html_sidebars = {
+    "**": [
+        "about.html",
+        "navigation.html",
+        "relations.html",
+        "searchbox.html",
+        "donate.html",
+    ]
+}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
