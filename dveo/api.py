@@ -65,7 +65,8 @@ class API:
                 requests.urllib3.exceptions.InsecureRequestWarning
             )
 
-    def _string2bool(self, string):
+    @staticmethod
+    def _string2bool(string):
         """Converts 'true' to True, 'false' to False and returns anything else."""
         if string == "true":
             return True
